@@ -79,21 +79,43 @@ This is a Django-powered website designed to enable users to **sell and browse o
 ---
 
 ### 📸 Screenshots
- ![Website Screenshot](static/media/online%20courses.pngscreenshot.png)
+![Website Screenshot](static/media/online%20courses.png)
 
  Here is the homepage and course layout using Bootstrap cards.
 
 ---
+## 🚀 Deploying on Render
 
-### ✅ Future Improvements
+Follow these steps to deploy your Django project on Render:
 
-* User authentication and registration
-* Course payment integration (e.g., Stripe)
-* Course preview and full-page details
-* Ratings and reviews
-* Instructor dashboard
+### 1. Create a Render Account
+- Visit [Render](https://portfolio-jxhc.onrender.com/) and sign up for a free account.
+
+### 2. Set Up the Project
+- Push your project to GitHub or GitLab.
+- In your Render dashboard, click **New** > **Web Service** and connect your GitHub/GitLab account.
+- Select the repository for your project.
+- Set the **Build Command** to `pip install -r requirements.txt`.
+- Set the **Start Command** to `gunicorn Portfolio-project.wsgi`.
+
+### 3. Configure Environment Variables
+- In your Render dashboard, go to **Environment Variables** and add:
+  - `SECRET_KEY=your-django-secret-key`
+  - `DATABASE_URL=your-database-url-from-render`
+  - You can find the `DATABASE_URL` in the **Databases** section of Render.
+
+### 4. Deploy
+- Click **Create Web Service** to start the deployment process.
+- Once complete, Render will give you a URL (e.g., `Portfolio-project.onrender.com`), where your site will be live!
 
 ---
+
+### 🔧 Future Improvements
+- User authentication and registration
+- Course payment integration (e.g., Stripe)
+- Course preview and full-page details
+- Ratings and reviews
+- Instructor dashboard
 
 ### 📄 License
 
