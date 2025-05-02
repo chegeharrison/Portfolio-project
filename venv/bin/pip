@@ -1,4 +1,6 @@
-#!/home/harrry/Documents/webdevelopment/udemy/portfolio/venv/bin/python
+#!/bin/sh
+'''exec' "/home/harrry/Documents/django_Projects/portfolio postgresql/venv/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
